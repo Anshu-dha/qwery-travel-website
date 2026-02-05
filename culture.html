@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>culture page</title>
+      <!--Font Awesome CDN-->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
+</head>
+<body>
+    <!-- culture section design  -->
+         <section>
+        <h3 class="title"><u><i>Culture</i></u></h3>
+        <div class="description">
+            <i><b>Indonesia is a land of rich and diverse cultures, where ancient traditions blend seamlessly with modern influences. Our culture section is your window into the heart of this vibrant nation, showcasing the unique customs, arts, and lifestyles that make each region special. From the detailed dance performances of Bali to the age-old crafts of Java, and the diverse food traditions across the islands, we invite you to explore the deep cultural heritage that defines Indonesia. Discover the stories, festivals, and rituals that have shaped the identity of this fascinating country, and experience the warmth and hospitality of its people.</b></i>
+        </div>
+    <div class="container">
+        <div class="slide"> 
+             <div class="item" style="background-image:url(./img/bali.jpg);">
+                <div class="content">
+                    <div class="name">Ministry of Religion Urges Churches</div>
+                    <div class="des">Best Places to visit in Bali</div>
+                    <button>See More</button>
+                </div>
+            </div>
+            <div class="item" style="background-image:url(./img/b2.jpg);">
+                <div class="content">
+                    <div class="name">Jember Fashion Carnival</div>
+                    <div class="des"> This festival marks the fashion trend of Indonesia.Also known as the icon of east Javas contemporary culture</div>
+                    <button>See More</button>
+                </div>
+            </div>
+            <div class="item" style="background-image: url(./img/c12.jpg);">
+                <div class="content">
+                    <div class="name">Eid-Ul-Fitr</div>
+                    <div class="des">Eid is one of the most important festivals of Indonesia.</div>
+                    <button>See More</button>
+                </div>
+            </div>
+             <div class="item" style="background-image: url(./img/bo.webp);">
+                <div class="content">
+                    <div class="name">Borobudur Temple</div>
+                    <div class="des">The world's largest Buddhist monument,renowned for its stunning architecture and intricate stone carvings.</div>
+                    <button>See More</button>
+                </div>
+            </div>
+             <div class="item" style="background-image: url(./img/c10.jpg);">
+                <div class="content">
+                    <div class="name"> Lampung Krakatau Festival</div>
+                    <div class="des">Indonesians celebrate the eruption of Mount Krakatau.It is one of the most happening festivals.</div>
+                    <button>See More</button>
+                </div>
+            </div>
+             <div class="item" style="background-image: url(./img/b1.jpg);">
+                <div class="content">
+                    <div class="name">Bali</div>
+                    <div class="des">This is our beautiful dance culture.</div>
+                    <button>See More</button>
+                </div>
+            </div>
+        </div>
+        <div class="button">
+            <button class="prev"><i class="fa-solid fa-arrow-left"></i></button>
+            <button class="next"><i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+    </div>
+</section>
+<style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: #292430;
+    overflow: hidden;
+}
+.title{
+    text-align: center;
+    font-size: 40px;
+    color: #ff0035;
+    margin-top: 20px;
+}
+.description{
+    text-align: justify;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size: 18px;
+    color: gray;
+    margin-top: 15px;
+}
+.container{
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1000px;
+    height: 400px;
+    background: #f5f5f5;
+    box-shadow: 0 20px 50px #292430;
+    border-radius: 20px;
+}
+.container .slide .item{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    border-radius: 20px;
+    box-shadow: 0 30px 50px #292430;
+    background-position: 50% 50%;
+    background-size: cover;
+    display: inline-block;
+    transition: 0.5s;
+}
+.slide .item:nth-child(1),
+.slide .item:nth-child(2){
+    top: 0;
+    left: 0;
+    transform: translate(0, 0);
+    border-radius: 0;
+    width: 100%;
+    height: 100%;
+}
+.slide .item:nth-child(3){
+    left: 50%;
+}
+.slide .item:nth-child(4){
+    left: calc(50% + 220px);
+}
+.slide .item:nth-child(5){
+    left: calc(50% + 440px);
+}
+/* here n = 0, 1, 2, 3,...*/ 
+.slide .item:nth-child(n + 6){
+    left: calc(50% + 660px);
+    opacity: 0;
+}
+.item .content{
+    position: absolute;
+    top: 50%;
+    left: 100px;
+    width: 300px;
+    text-align: left;
+    color: #eee;
+    transform: translate(0, -50%);
+    font-family: system-ui;
+    display: none;
+}
+.slide .item:nth-child(2) .content{
+    display: block;
+}
+.content .name{
+    font-size: 40px;
+    text-transform: uppercase;
+    font-weight: bold;
+    opacity: 0;
+    animation: animate 1s ease-in-out 1 forwards;
+    color: #8f1630;
+}
+.content .des{
+    margin-top: 5px;
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    opacity: 0;
+    color: #1e034d;
+    animation: animate 1s ease-in-out 0.3s 1 forwards;
+}
+.content button{
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    opacity: 0;
+    animation: animate 1s ease-in-out 0.6s 1 forwards;
+    border-radius: 20px;
+    background-color: darkmagenta;
+}
+@keyframes animate {
+    from{
+        opacity: 0;
+        transform: translate(0, 100px);
+        filter: blur(33px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translate(0);
+        filter: blur(0);
+    }
+}
+.button{
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: 20px;
+}
+.button button{
+    width: 40px;
+    height: 35px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    margin: 0 5px;
+    border: 1px solid #000;
+    transition: 0.3s;
+}
+.button button:hover{
+    background: #ababab;
+    color: #fff;
+}
+</style>
+    <script>
+        let next = document.querySelector('.next')
+let prev = document.querySelector('.prev')
+next.addEventListener('click', function(){
+    let items = document.querySelectorAll('.item')
+    document.querySelector('.slide').appendChild(items[0])
+})
+prev.addEventListener('click', function(){
+    let items = document.querySelectorAll('.item')
+    document.querySelector('.slide').prepend(items[items.length - 1]) 
+})
+    </script>
+</body>
+</html>

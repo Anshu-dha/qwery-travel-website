@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>about page</title>
+</head>
+<body>
+<!-- about section design  -->
+         <section>
+        <h3 class="title"><u><i>Gallery</i></u></h3>
+        <div class="description">
+            <i><b>Welcome to our Indonesian travel website, where we bring the beauty and diversity of Indonesia to your fingertips. Our site is designed to help you explore the wonders of this incredible group of islands, from its serene beaches and vibrant cities to its rich cultural heritage and breathtaking landscapes. Whether you're planning a peaceful getaway or an adventurous expedition, we offer insights and tips to make your journey unforgettable. Let us be your guide to discovering the magic of Indonesia, where every destination offers a new story to tell.</b></i>
+        </div>
+         <div class="ctr-accordion">
+        <div class="tab">
+            <img src="img\ab1.jpeg">
+        </div>
+        <div class="tab">
+            <img src="img\ab9.jpeg">
+        </div>
+        <div class="tab">
+            <img src="img\ab3.jpeg">
+        </div>
+        <div class="tab">
+            <img src="img\ab6.jpeg">
+        </div>
+        <div class="tab">
+            <img src="img\ab8.jpeg">
+        </div>
+        <div class="tab">
+            <img src="img\ab5.jpeg">
+        </div>
+        <div class="tab">
+            <img src="img\ab4.jpeg">
+        </div>
+        <div class="tab">
+            <img src="img\ab2.jpeg">
+        </div>
+        <div class="tab">
+            <img src="img\ab7.jpeg">
+        </div>
+   </div>    
+    </section>
+    <!-- card design -->
+    <section>
+        <h3 class="title"><i>Popular places</i></h3>
+     <div class="container">
+        <div class="card">
+            <div class="imgBx">
+                <img src="img\bali1.jpg">
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam delectus facilis quaerat ut quia deserunt sint eius aspernatur architecto reiciendis.</p>
+            <h2>card 01</h2>
+        </div>
+        <div class="card">
+            <div class="imgBx">
+                <img src="img\bali2.jpg">
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam delectus facilis quaerat ut quia deserunt sint eius aspernatur architecto reiciendis.</p>
+            <h2>card 01</h2>
+        </div>
+        <div class="card">
+            <div class="imgBx">
+                <img src="img\bali3.jpg">
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam delectus facilis quaerat ut quia deserunt sint eius aspernatur architecto reiciendis.</p>
+            <h2>card 01</h2>
+        </div>
+    </div> 
+    <style>
+*{
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #292430;
+}
+.title{
+    text-align: center;
+    font-size: 40px;
+    color: #ff0035;
+}
+.description{
+    text-align: justify;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: gray;
+}
+.ctr-accordion{
+    max-width: 1400px;
+    height: 320px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: space-around;
+    gap: 20px;
+    overflow: hidden;
+    margin: 50px auto;
+    margin-bottom: 30px;
+} 
+.tab{
+    position: relative;
+    width: 20%;
+    height: inherit;
+    padding: 5px;
+    background: rgb(150,150,150);
+    cursor: pointer;
+    transition: width .5s ease;
+    border-radius: 25px;
+} 
+.tab img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.5s ease;
+    border-radius: 25px;
+}
+.tab:hover img{
+    opacity: 0.6;
+}
+.tab:hover{
+    width: 80%;
+}
+/*slide*/
+.container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 60px;
+    margin-top: 80px;
+    margin-bottom: 100px;
+}
+.container .card{
+    position: relative;
+    width: 320px;
+    height: 250px;
+    background: #fff;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.container .card:hover{
+    height: 350px;
+}
+.container .card .imgBx{
+    position: absolute;
+    inset: 20px 20px 50px 20px;
+    background: #292430;
+    border-radius: 15px;
+    transition: 0.5s;
+    z-index: 1000;
+}
+.container .card:hover .imgBx{
+    inset: -50px 60px 250px 60px;
+    box-shadow: 0 0 0 10px #292430;
+}
+.container .card .imgBx::before{
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    left: -30px;
+    border-top-right-radius: 20px;
+    transform: translateY(-100px);
+    opacity: 0;
+    box-shadow: 5px -5px 0 4px #292430;
+    pointer-events: none;
+    transition: 0.5s;
+}
+.container .card:hover .imgBx::before{
+    opacity: 1;
+    transform: translateY(50px);
+}
+.container .card .imgBx::after{
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    right: -30px;
+    border-top-left-radius: 20px;
+    transform: translateY(-100px);
+    opacity: 0;
+    box-shadow: -5px -5px 0 4px #292430;
+    pointer-events: none;
+    transition: 0.5s;
+}
+.container .card:hover .imgBx::after{
+    opacity: 1;
+    transform: translateY(50px);
+}
+.container .card .imgBx img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+.container .card p{
+    position: relative;
+    padding: 40px;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-50px);
+    transition: 0.5s;
+    color: red;
+}
+.container .card:hover p{
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(40px);
+}
+.container .card h2{
+    position: absolute;
+    bottom: 8px;
+    color: #333;
+    transition: 0.5s;
+    font-weight: 600;
+}
+.container .card:hover h2{
+    padding: 5px 25px;
+    background: #65ff50;
+    bottom: -25px;
+    border-radius: 15px;
+    box-shadow: 0 0 0 10px #292430;
+}
+    </style>
+</body>
+</html>
